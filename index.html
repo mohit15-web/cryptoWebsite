@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto_World</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS Link -->
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    main {
+      width: 100%;
+      height: 80vh;
+      font-family: "Mirza", serif;
+      font-weight: 400;
+      font-style: normal;
+      position: relative;
+      background-image: url(./images/bitcoin-cryptocurrency5k-ne-1920x1080.jpg);
+      background-position: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    .home-slider {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .home-slider .card {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 200px;
+      margin: 1rem;
+      padding: 1rem 0;
+      /* border: 2px solid #29f4d4; */
+    }
+
+    .main-carousel3 {
+      width: 100%;
+      height: 300px;
+    }
+
+    .main-carousel3 img {
+      width: 200px;
+      height: 200px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px black;
+      object-fit: cover;
+    }
+
+    .main-carousel3 .flickity-prev-next-button {
+      background-color: #3498db;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+  <header class="px-20 header flex justify-between items-center py-6">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <img src="images/logo1.png" class="Logo" style="width: 70px; cursor: pointer;">
+      <span class="ml-3 text-xl text-white">Crypto World</span>
+    </a>
+    <nav class="flex items-center justify-center text-2xl">
+      <a class="mr-5 hover:text-blue-400 ease-in duration-300" href="Main.html" target="_blank">Home</a>
+      <a class="mr-5 hover:text-blue-400 ease-in duration-300" href="news.html" target="_blank">News</a>
+      <a class="mr-5 hover:text-blue-400 ease-in duration-300" href="Crypto.html" target="_blank">Crypto</a>
+      <a class="mr-5 hover:text-blue-400 ease-in duration-300" href="About.html" target="_blank">About</a>
+    </nav>
+    <a href="#Search"
+      class="border border-white text-white font-bold py-2 px-4 rounded-lg hover:text-blue-400 ease-in duration-300">Get
+      Started</a>
+
+  </header>
+
+  <main class="mb-20 pl-12">
+    <div class="text-white w-1/2 flex flex-col gap-6">
+      <h1 class="text-6xl font-bold m-4 pt-20 text-white sm:text-9xl">CryptoView</h1>
+      <p class="text-4xl pl-12">A platform to view information about all cryptocurrencies live.</p>
+
+      <button
+        class="w-60 border border-white text-white font-bold ml-10 py-2 px-4 rounded-lg hover:text-blue-400 ease-in duration-300">Explore
+        Now</button>
+    </div>
+  </main>
+
+
+
+
+
+  <!-- slider -->
+  <div class="home-slider w-full ">
+    <div class="main-carousel3" id="slider"
+      data-flickity='{ "freeScroll": true,"pageDots": false, "wrapAround": true, "autoPlay":1000, "prevNextButtons": false, "contain": true, "friction": 0.2, "selectedAttraction": 0.01}'>
+      <div class="card">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.FV2ZzhacnxqiobC4s2CqvQHaFL&pid=Api&P=0&h=220" alt="">
+      </div>
+      <div class="card">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.3E5HHkv7B-cQWtNNiZOSYwAAAA&pid=Api&P=0&h=220" alt="">
+      </div>
+      <div class="card">
+        <img src="https://www.meidilight.com/wp-content/uploads/2022/01/11-22-1024x682.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://www.cryptocurrencykb.com/wp-content/uploads/2019/05/Cryptocurrency-Wallpaper-8.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.skiuRaOQECc4o5T9EqRYBgHaE8&pid=Api&P=0&h=220" alt="">
+      </div>
+      <div class="card">
+        <img src="https://www.cointribune.com/app/uploads/2021/02/12706B4A-F4A6-4225-AD4B-C8AED0ACCFDB.jpeg" alt="">
+      </div>
+      <div class="card">
+        <img src="https://www.cryptocurrencykb.com/wp-content/uploads/2019/05/Cryptocurrency-Wallpaper-8.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Search -->
+  <div class="w-full" id="Search">
+    <div class="flex justify-center items-center">
+      <input type="text" id="text" placeholder="Search...."
+        class="p-2 text-black border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 text-2xl my-20 w-96">
+    </div>
+
+    <div id="cryptoContainer" class="flex flex-col gap-3 bg-gray-900 text-white mb-20">
+      <div class="w-full p-4 bg-gray-500 shadow-lg flex justify-around items-center">
+        <h3 class="text-xl font-semibold -ml-10">Rank</h3>
+
+        <div class="flex justify-center items-center gap-3 -ml-20">
+          <h3 class="text-xl font-semibold">Symbol</h3>
+        </div>
+
+        <h3 class="text-xl font-semibold -ml-10">Name</h3>
+
+        <h3 class="text-xl">Price</h3>
+
+        <h3 class="text-xl">Market Cap</h3>
+
+        <h3 class="text-xl">More Info</h3>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- Footer -->
+  <footer id="contactUs" class="bg-gray-900 py-12">
+    <div class="container mx-auto px-4">
+      <div class="useful-links flex flex-wrap justify-between gap-6 md:gap-20">
+        <div class="social-media">
+          <div class="logo flex items-center gap-6">
+            <img src="images/logo1.png" class="Logo" style="width: 70px; cursor: pointer;">
+            <a href="#" class="text-white font-bold text-2xl">Crypto World</a>
+          </div>
+          <p class="text-gray-300 max-w-sm mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae quam nec ante fringilla vel
+            at erat convallis elit.
+          </p>
+          <div class="media flex gap-2">
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-900 hover:bg-blue-500">
+              <i class="fab fa-facebook-f text-white"></i>
+            </a>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-900 hover:bg-blue-500">
+              <i class="fab fa-twitter text-white"></i>
+            </a>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-900 hover:bg-blue-500">
+              <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-900 hover:bg-blue-500">
+              <i class="fab fa-youtube text-white"></i>
+            </a>
+          </div>
+        </div>
+        <div class="list">
+          <h3 class="text-white text-lg mb-6">Quick Links</h3>
+          <ul>
+            <li><a href="#" class="text-gray-400 hover:text-blue-500">what is ico</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-500">roadmap</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-500">whitepaper</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-500">social network</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-500">join us now</a></li>
+          </ul>
+        </div>
+        <div class="list">
+          <h3 class="text-white text-lg mb-6">Supports</h3>
+          <ul>
+            <li><a href="#" class="text-gray-400 hover:text-blue-500">setting & privacy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-500">help and support</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-500">terms & conditions</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-500">24/7 support</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-500">on point faq</a></li>
+          </ul>
+        </div>
+        <div class="list">
+          <h3 class="text-white text-lg mb-6">News & Post</h3>
+          <div class="info flex gap-6 mb-6">
+            <div class="image w-20 h-20 overflow-hidden rounded-md">
+              <img src="./images/footer (2).png" alt="">
+            </div>
+            <div class="details flex-1">
+              <h4 class="text-gray-400 text-lg mb-1 cursor-pointer hover:text-blue-500">Roll Out New Features Without
+                Hurting Loyal Users</h4>
+              <h5 class="text-gray-400 text-sm flex items-center gap-1">
+                <i class="fas fa-calendar text-gray-400"></i>
+                Mar 28, 2024
+              </h5>
+            </div>
+          </div>
+          <div class="info flex gap-6">
+            <div class="image w-20 h-20 overflow-hidden rounded-md">
+              <img src="./images/footer (1).png" alt="">
+            </div>
+            <div class="details flex-1">
+              <h4 class="text-gray-400 text-lg mb-1 cursor-pointer hover:text-blue-500">Top 10 Best Cryptocurrency Blogs
+                and Websites</h4>
+              <h5 class="text-gray-400 text-sm flex items-center gap-1">
+                <i class="fas fa-calendar text-gray-400"></i>
+                Mar 28, 2024
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
