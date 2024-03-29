@@ -1,32 +1,27 @@
 const cryptoContainer = document.getElementById("cryptoContainer");
-const inputText = document.getElementById("text");
+const coinSearchBtn = document.getElementById("coinSearchBtn");
+const coinResetBtn = document.getElementById("coinResetBtn");
 
-const url =
-  "https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0";
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "c6b77b25a9msh4fe51e21727aad3p171430jsn50b8fc836df7",
-    "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
-  },
-};
-
-async function fetchData() {
-  // if (inputText.value === "") {
-  //   alert("Search")
-  // }
+async function fetchData(searchTerm = "") {
+  const url = `https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&search=${searchTerm}&orderDirection=desc&limit=200&offset=0`;
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "c6b77b25a9msh4fe51e21727aad3p171430jsn50b8fc836df7",
+      "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
+    },
+  };
 
   try {
     const response = await fetch(url, options);
     const result = await response.json();
     console.log(result);
-    // console.log(result.data.coins[0].name);
-    // slider.innerHTML = "";
-    for (let i = 0; i < 50; i++) {
+
+    for (let i = 0; i < 150; i++) {
       let cryptoData = result.data.coins[i];
       let cryptoCard = document.createElement("div");
       cryptoCard.className =
-        " w-full p-4 bg-gray-500 shadow-lg flex justify-around items-center";
+        "cryptoCard w-10/12 m-auto p-4 bg-gray-500 shadow-lg flex justify-around items-center rounded-lg";
 
       cryptoCard.innerHTML = `
 
@@ -52,25 +47,21 @@ async function fetchData() {
     console.error(error);
   }
 }
+fetchData();
 
-inputText.addEventListener("input", (e) => {
-  const searchTerm = e.target.value.toLowerCase().trim();
-  const allCards = document.querySelectorAll(".cryptoCard");
+coinSearchBtn.addEventListener("click", (e) => {
+  e.preventDefault(); // Prevent the default form submission behavior
 
-  allCards.forEach((card) => {
-    const cardContent = card.innerText.toLowerCase();
-    if (cardContent.includes(searchTerm)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
+  const searchTerm = document.getElementById("text").value.trim(); // Get the search term entered by the user
+
+  cryptoContainer.innerHTML = ""; // Clear the content of the cryptoContainer
+
+  fetchData(searchTerm); // Fetch data based on the search term
 });
 
 
-
-fetchData();
-
-
-
-
+coinResetBtn.addEventListener("click", (e) => {
+  e.preventDefault(); // Prevent the default form submission behavior
+  cryptoContainer.innerHTML = ""; // Clear the content of the cryptoContainer
+  fetchData(); // Fetch data based on the search term
+});
