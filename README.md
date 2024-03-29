@@ -4,7 +4,7 @@
 This project is a cryptocurrency website aimed at providing information and resources related to cryptocurrencies. It offers features such as live cryptocurrency prices, market trends, news updates, portfolio management, and educational content.
 
 ## Demo 🎥
-[Link to Demo](#) <!-- Add a link to your live demo or a video demo of your project -->
+[Link to Demo](https://mohit15-web.github.io/cryptoWebsite/) <!-- Add a link to your live demo or a video demo of your project -->
 
 ## Features ✨
 - **Live Cryptocurrency Prices**: Display real-time prices of various cryptocurrencies.
